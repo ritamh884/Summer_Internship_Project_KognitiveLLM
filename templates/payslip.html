@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payslip Analysis</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/payslip.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>📄 Payslip Analysis</h1>
+
+<p>
+Upload a payslip to analyze salary components
+and determine loan eligibility.
+</p>
+
+<form action="/upload_payslip"
+method="POST"
+enctype="multipart/form-data">
+
+<input
+type="file"
+name="file"
+accept=".pdf,.png,.jpg,.jpeg"
+required>
+
+<button type="submit">
+
+Upload & Analyze
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">
+
+<button class="back">
+
+⬅ Back to Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

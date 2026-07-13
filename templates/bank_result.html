@@ -1,0 +1,155 @@
+<!--
+====================================================================
+             BANK STATEMENT ANALYSIS RESULT PAGE
+====================================================================
+
+Description
+-----------
+This HTML template displays the results of the uploaded bank statement
+analysis. It presents the extracted transaction details in a dynamic
+table and visualizes financial data using bar charts and pie charts,
+providing users with an interactive overview of their transaction
+history and spending patterns.
+
+Main Features
+-------------
+• Displays extracted bank transaction records.
+• Generates a dynamic transaction table using Jinja2.
+• Shows transaction analysis through bar charts.
+• Visualizes expense categories using a pie chart.
+• Provides navigation back to the dashboard.
+
+Technologies Used
+-----------------
+HTML5 • CSS3 • Jinja2 • Flask
+
+====================================================================
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Bank Statement Analysis</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/bank_result.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>🏦 Bank Statement Analysis</h1>
+
+<a href="/dashboard" class="dashboard">
+
+← Dashboard
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+Extracted Transactions
+
+</h2>
+
+<p>
+
+AI extracted the following transaction details from your uploaded bank statement.
+
+</p>
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+{% for column in tables[0].keys() %}
+
+<th>{{ column }}</th>
+
+{% endfor %}
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for row in tables %}
+
+<tr>
+
+{% for value in row.values() %}
+
+<td>{{ value }}</td>
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<h2 style="margin-top:40px;text-align:center;">
+    Transaction Analysis
+</h2>
+
+<div style="text-align:center;margin-top:20px;">
+
+    <img
+        src="{{ url_for('static', filename='charts/barplot.png') }}"
+        style="width:95%;
+               max-width:1200px;
+               border-radius:12px;
+               box-shadow:0 10px 25px rgba(0,0,0,.15);">
+
+</div>
+
+<div class="chart-container">
+
+    <div class="chart-box">
+
+        <h2>Top 7 Transactions</h2>
+
+        <img src="{{ url_for('static', filename='charts/bar.png') }}">
+
+    </div>
+
+    <div class="chart-box">
+
+        <h2>Expense Category</h2>
+
+        <img src="{{ url_for('static', filename='charts/pie.png') }}">
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

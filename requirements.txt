@@ -1,0 +1,13 @@
+Flask
+opencv-python
+pytesseract
+PyMuPDF
+pdfplumber
+pandas
+numpy
+matplotlib
+torch
+transformers
+datasets
+accelerate
+scikit-learn

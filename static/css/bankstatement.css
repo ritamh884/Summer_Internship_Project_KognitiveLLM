@@ -1,0 +1,305 @@
+/*
+====================================================================
+            BANK STATEMENT UPLOAD PAGE STYLESHEET
+====================================================================
+
+Description
+-----------
+This stylesheet defines the user interface for the Bank Statement
+Upload page. It provides a modern, responsive layout with a secure
+file upload section, navigation controls, and an information panel
+to enhance the user experience during document submission.
+
+Main Features
+-------------
+• Modern responsive page layout with gradient background.
+• Dashboard navigation and header styling.
+• Professional file upload card with drag-and-drop appearance.
+• Interactive upload button and hover animations.
+• Information panel for user guidance.
+• Feature list section with card-based styling and smooth transitions.
+
+Technologies Used
+-----------------
+HTML5 • CSS3
+
+====================================================================
+*/
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+
+}
+
+body{
+
+background:linear-gradient(135deg,#edf4ff,#d9e9ff,#eef7ff);
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.container{
+
+width:1100px;
+
+}
+
+.topbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:35px;
+
+}
+
+.topbar h1{
+
+font-size:35px;
+
+color:#0f172a;
+
+}
+
+.dashboard-btn{
+
+background:#1e40af;
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.dashboard-btn:hover{
+
+background:#2563eb;
+
+transform:translateY(-2px);
+
+}
+
+.upload-card{
+
+background:white;
+
+display:flex;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+}
+
+.left{
+
+width:65%;
+
+padding:60px;
+
+}
+
+.right{
+
+width:35%;
+
+background:#f8fbff;
+
+padding:50px;
+
+border-left:1px solid #e2e8f0;
+
+}
+
+.icon{
+
+font-size:75px;
+
+margin-bottom:20px;
+
+}
+
+.left h2{
+
+font-size:40px;
+
+color:#2563eb;
+
+margin-bottom:15px;
+
+}
+
+.left p{
+
+font-size:18px;
+
+color:#555;
+
+margin-bottom:35px;
+
+line-height:30px;
+
+}
+
+.upload-box{
+
+display:block;
+
+border:3px dashed #4f8cff;
+
+border-radius:18px;
+
+padding:70px;
+
+text-align:center;
+
+cursor:pointer;
+
+transition:.3s;
+
+background:#f7fbff;
+
+}
+
+.upload-box:hover{
+
+background:#edf5ff;
+
+transform:scale(1.02);
+
+}
+
+.upload-box input{
+
+display:none;
+
+}
+
+.upload-box span{
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#2563eb;
+
+}
+
+button{
+
+margin-top:30px;
+
+width:100%;
+
+padding:18px;
+
+font-size:20px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(90deg,#2563eb,#4f8cff);
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 30px rgba(37,99,235,.35);
+
+}
+
+.info{
+
+margin-top:35px;
+
+background:#eef8ff;
+
+padding:20px;
+
+border-left:5px solid #2563eb;
+
+border-radius:10px;
+
+font-size:17px;
+
+color:#374151;
+
+}
+
+.right h3{
+
+font-size:30px;
+
+margin-bottom:30px;
+
+color:#0f172a;
+
+}
+
+.right ul{
+
+list-style:none;
+
+}
+
+.right ul li{
+
+padding:18px;
+
+margin-bottom:15px;
+
+background:white;
+
+border-radius:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.right ul li:hover{
+
+transform:translateX(8px);
+
+background:#e8f1ff;
+
+}

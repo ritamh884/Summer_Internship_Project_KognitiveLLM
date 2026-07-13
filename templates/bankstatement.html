@@ -1,0 +1,160 @@
+<!--
+====================================================================
+              BANK STATEMENT UPLOAD PAGE
+====================================================================
+
+Description
+-----------
+This HTML template provides a user interface for uploading bank
+statement PDF files. It enables users to securely submit documents
+for automated transaction extraction, expense categorization, and
+financial analysis with graphical visualization.
+
+Main Features
+-------------
+• Secure PDF file upload.
+• Dashboard navigation.
+• Bank statement analysis initiation.
+• AI-based financial analysis feature overview.
+
+Technologies Used
+-----------------
+HTML5 • CSS3 • Jinja2 • Flask
+
+====================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Upload Bank Statement</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/bankstatement.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+
+        <h1>
+            🏦 AI Financial Analyzer
+        </h1>
+
+        <a href="/dashboard" class="dashboard-btn">
+            ← Dashboard
+        </a>
+
+    </div>
+
+
+    <div class="upload-card">
+
+        <div class="left">
+
+            <div class="icon">
+
+                📄
+
+            </div>
+
+            <h2>
+
+                Upload Bank Statement
+
+            </h2>
+
+            <p>
+
+                Upload your Bank Statement (PDF) to automatically
+                extract transactions and analyze expenses.
+
+            </p>
+
+
+            <form action="/upload_bankstatement"
+
+                  method="POST"
+
+                  enctype="multipart/form-data">
+
+                <label class="upload-box">
+
+                    <input
+
+                        type="file"
+
+                        name="file"
+
+                        accept=".pdf"
+
+                        required>
+
+                    <span>
+
+                        📁 Choose PDF File
+
+                    </span>
+
+                </label>
+
+                <button type="submit">
+
+                    Upload & Analyze
+
+                </button>
+
+            </form>
+
+            <div class="info">
+
+                🔒 Secure Upload
+
+                <br>
+
+                Your files are processed locally and are not shared.
+
+            </div>
+
+        </div>
+
+
+        <div class="right">
+
+            <h3>
+
+                Features
+
+            </h3>
+
+            <ul>
+
+                <li>✔ Automatic PDF Extraction</li>
+
+                <li>✔ Description Detection</li>
+
+                <li>✔ Debit Transaction Analysis</li>
+
+                <li>✔ Expense Categorization</li>
+
+                <li>✔ AI Financial Insights</li>
+
+                <li>✔ Bar Chart Visualization</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

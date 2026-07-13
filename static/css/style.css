@@ -1,0 +1,282 @@
+/* Google Font */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+
+}
+
+/* Main Container */
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+/* Login Card */
+
+.login-card{
+
+    width:420px;
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+/* Logo */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.logo i{
+
+    font-size:55px;
+
+    color:#4ade80;
+
+    margin-bottom:10px;
+
+}
+
+.logo h1{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.logo p{
+
+    color:#dbeafe;
+
+    margin-top:8px;
+
+    font-size:14px;
+
+}
+
+/* Labels */
+
+.input-box{
+
+    margin-bottom:20px;
+
+}
+
+.input-box label{
+
+    color:white;
+
+    font-size:15px;
+
+    display:block;
+
+    margin-bottom:8px;
+
+}
+
+/* Input */
+
+.input-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    border:2px solid #38bdf8;
+
+}
+
+/* Password */
+
+.password-container{
+
+    position:relative;
+
+}
+
+.toggle-password{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+/* Forgot Password */
+
+.options{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-bottom:25px;
+
+}
+
+.options a{
+
+    color:#bfdbfe;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+}
+
+.options a:hover{
+
+    color:white;
+
+}
+
+/* Login Button */
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#16a34a;
+
+    transform:translateY(-2px);
+
+}
+
+/* Register */
+
+.register{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.register a{
+
+    color:#38bdf8;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.register a:hover{
+
+    color:white;
+
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+.login-card{
+
+width:100%;
+
+padding:30px 25px;
+
+}
+
+.logo h1{
+
+font-size:22px;
+
+}
+
+}

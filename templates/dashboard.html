@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Financial Analyzer</h1>
+
+    <h2>Welcome 👋</h2>
+
+    <p>Select an option</p>
+
+    <div class="card">
+
+        <h3>📄 Payslip Analysis</h3>
+
+        <p>
+            Upload Payslip (PDF/JPG/PNG)
+            <br>
+            Detect Salary Components
+            <br>
+            Loan Eligibility
+        </p>
+
+        <a href="/payslip">
+            <button>Open</button>
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>🏦 Bank Statement Analysis</h3>
+
+        <p>
+            Upload Statement
+            <br>
+            Expense Categorization
+            <br>
+            AI Analysis
+        </p>
+
+        <a href="/bankstatement">
+            <button>Open</button>
+        </a>
+
+    </div>
+
+
+    <a href="/">
+        <button class="logout">
+            Logout
+        </button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Financial Analyzer</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8d7f9f0d6d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="login-card">
+
+<div class="logo">
+
+<i class="fas fa-shield-alt"></i>
+
+<h1>AI Financial Analyzer</h1>
+
+<p>Secure Login Portal</p>
+
+</div>
+
+<form action="/login" method="POST">
+
+<div class="input-box">
+
+<label>Username</label>
+
+<input type="text"
+name="username"
+placeholder="Enter Username"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Password</label>
+
+<div class="password-container">
+
+<input
+type="password"
+id="password"
+name="password"
+placeholder="Enter Password"
+required>
+
+<span
+class="toggle-password"
+onclick="togglePassword()">
+
+👁
+
+</span>
+
+</div>
+
+</div>
+
+<div class="options">
+
+<a href="/forgot">Forgot Password?</a>
+
+</div>
+
+<button
+class="login-btn"
+type="submit">
+
+Login
+
+</button>
+
+<div class="register">
+
+Don't have an account?
+
+<a href="/register">
+
+Register
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
